@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AssemblyAI Django app</title>
+  </head>
+  <body>
+    <h1>Transcription app with AssemblyAI</h1>
+    <h2>Upload file:</h2>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" accept="audio/*" name="audio_file" />
+      <button id="upload-button" type="submit">Upload</button>
+    </form>
+
+    <h2>Transcript:</h2>
+
+    {% if error %}
+    <p id="error" style="color: red">{{ error }}</p>
+    {% endif %}
+
+    <p id="transcript">{{transcript}}</p>
+
+    <script>
+      const errorEl = document.getElementById("error");
+      const transcriptEl = document.getElementById("transcript");
+      const fileUploadBtn = document.getElementById("upload-button");
+      fileUploadBtn.addEventListener("click", updateTranscriptionText);
+      async function updateTranscriptionText() {
+        if (errorEl) {
+          errorEl.remove();
+        }
+        transcriptEl.innerText = "Transcribing...";
+      }
+    </script>
+  </body>
+</html>
