@@ -6,7 +6,7 @@ Demo:
 
 ![Demo of the Django app](demo.GIF)
 
-A **step-by-step tutorial** can be found in the corresponding [blog post](www.assemblyai.com/blog/speech-to-text-with-django/).
+A **step-by-step tutorial** can be found in the corresponding [blog post](https://www.assemblyai.com/blog/speech-to-text-with-django/).
 
 ## Get Started
 
