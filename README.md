@@ -40,7 +40,7 @@ python manage.py startapp transcriptions
 
 The following files were modified:
 
-- The view that handles transcriptions is implemented in `/transcriptions.views.py`
+- The view that handles transcriptions is implemented in `/transcriptions/views.py`
 - The template to upload and submit audio files, and to show the transcribed text, is implemented in `/transcriptions/templates/index.html`
 - The URLs are defined in `/stt_project/urls.py` and `/transcriptions/urls.py`
 - Environment variables are loaded with `load_dotenv()` in `/stt_project/settings.py`
